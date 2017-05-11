@@ -3,4 +3,6 @@ from django.http import HttpResponse
 
 def index(request) :
 	return HttpResponse("<h2>HEYYY</h2>")
-# Create your views here.
+
+def detail(request,offer_id):
+	return HttpResponse("<h2>details:"+str(offer_id)+ "</h2>")

@@ -5,6 +5,10 @@ class Offer(models.Model):
 	discription=models.CharField(max_length=200)
 	date=models.DateTimeField('date published')
 
+
+    def __str__(self):
+    	return self.company_name +'_' +self.discription
+    	
 class company(models.Model):
 	offer=models.Foreignkey(Offer,on_delete=models.CASCADE)
 	name=models.CharField(max_length=200)
