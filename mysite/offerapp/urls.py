@@ -5,6 +5,7 @@ urlpatterns = [
 url (r'^$' , views.index , name='inedex'),
 #make routes depends on offers id 
 url (r'^(?p<offer_id>[0-9]+)$' , views.detail , name='detail'),
+url(r'^login/$', views.login, {'template_name': 'login.html'}, name='login'),
 
 
 ]
